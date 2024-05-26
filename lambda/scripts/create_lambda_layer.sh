@@ -52,5 +52,5 @@ cp "${REQUIREMENTS_FILE}" "${DEST_DIR}"
   rm -rf python/bin
 
   # Return JSON for Terraform
-  docker run -i stedolan/jq -n --arg path "${DEST_DIR}" '{"path":$path}'
+  docker run -i ghcr.io/jqlang/jq:1.7.1 -n --arg path "${DEST_DIR}" '{"path":$path}'
 )
